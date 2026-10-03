@@ -94,7 +94,7 @@
     <div class="lang-switch"><a href="index.html">日本語</a></div>
     <h1>Privacy Policy</h1>
     <p class="app-name">GuideAnywhere AI (どこでもガイド)</p>
-    <p class="updated">Last updated: March 25, 2026</p>
+    <p class="updated">Last updated: October 3, 2026</p>
 
     <p>"GuideAnywhere AI" (hereinafter "the App") is a service that provides AI-generated audio commentary about nearby locations based on the user's position. This Privacy Policy describes the information the App collects and how it is handled.</p>
 
@@ -104,8 +104,8 @@
     <p>The App collects your location data (latitude and longitude) to provide location-based commentary. Location data may also be collected in the background.</p>
     <ul>
       <li><strong>Purpose</strong>: To generate contextual commentary about nearby places</li>
-      <li><strong>Storage</strong>: Guide history is stored locally on your device (up to 100 entries). No location data is stored on our servers</li>
-      <li><strong>Third-party sharing</strong>: Location data is sent to Google Maps API to retrieve address and point-of-interest information</li>
+      <li><strong>Storage</strong>: Guide history is stored locally on your device (up to 100 entries). No location data is stored on our servers, and it is not recorded in server logs</li>
+      <li><strong>Third-party sharing</strong>: Location data is sent to Google Maps API to retrieve address and point-of-interest information, and location-based context is sent to Google Gemini API to generate commentary</li>
     </ul>
 
     <h3>Device Identifier</h3>
@@ -114,6 +114,23 @@
       <li><strong>Purpose</strong>: Managing the daily usage quota</li>
       <li><strong>Storage</strong>: Temporarily held in server memory and reset daily</li>
       <li><strong>Identification</strong>: The device identifier cannot be used to personally identify you</li>
+    </ul>
+
+    <h3>Purchase Information (Premium)</h3>
+    <p>When you purchase or restore Premium (one-time purchase), transaction information from the App Store / Google Play (data that proves the purchase) is sent to our server to confirm that the purchase is valid.</p>
+    <ul>
+      <li><strong>Purpose</strong>: Confirming purchases and providing Premium features</li>
+      <li><strong>Processing</strong>: Verified on our server using Apple's / Google's mechanisms. Transaction information is not stored on our server</li>
+      <li><strong>Storage</strong>: After verification, an identifier indicating Premium status is stored on your device</li>
+      <li><strong>Payment details</strong>: Credit card and other payment details are processed by Apple / Google; the App never receives them</li>
+    </ul>
+
+    <h3>Access Logs</h3>
+    <p>The App's server (Google Cloud Run) automatically records access logs for stable operation, abuse prevention, and troubleshooting.</p>
+    <ul>
+      <li><strong>Recorded</strong>: Source IP address, access date and time, requested URL, and app/OS type (user agent)</li>
+      <li><strong>Not recorded</strong>: Location data (latitude, longitude, address) and guide content</li>
+      <li><strong>Retention</strong>: Kept for up to 30 days and then automatically deleted</li>
     </ul>
 
     <h3>Advertising Data</h3>
@@ -131,6 +148,8 @@
       <li>Generating and delivering location-based guide content</li>
       <li>Managing usage limits</li>
       <li>Displaying advertisements</li>
+      <li>Confirming purchases and providing Premium features</li>
+      <li>Operating the server reliably and preventing abuse</li>
       <li>Improving the App and fixing issues</li>
     </ul>
 
@@ -142,13 +161,16 @@
       <tr><td>Google Cloud Text-to-Speech</td><td>Generated text</td><td>Audio synthesis</td></tr>
       <tr><td>Google Maps API</td><td>Latitude and longitude</td><td>Address and POI retrieval</td></tr>
       <tr><td>Google AdMob</td><td>Ad identifier and device info</td><td>Ad delivery</td></tr>
+      <tr><td>Apple App Store / Google Play</td><td>Transaction information</td><td>Purchase verification</td></tr>
+      <tr><td>Google Cloud (server infrastructure)</td><td>Access logs</td><td>Server operation</td></tr>
     </table>
     <p>We do not share personal information with any third parties other than those listed above.</p>
 
     <h2>4. Data Storage</h2>
     <ul>
       <li><strong>On-device</strong>: Guide history (text and location) is stored in local storage on your device</li>
-      <li><strong>Server</strong>: No persistent storage of user data. Information is used temporarily for request processing only</li>
+      <li><strong>Server</strong>: No persistent storage of user data. Information is used temporarily for request processing only. Location data and guide content are not recorded in logs</li>
+      <li><strong>Access logs</strong>: Connection records such as the source IP address are kept for up to 30 days and then automatically deleted</li>
     </ul>
 
     <h2>5. Your Rights</h2>
